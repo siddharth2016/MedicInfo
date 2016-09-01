@@ -1,0 +1,29 @@
+/* DESIGN TABLE HTML CSS DESIGN */
+table 
+{
+	border:8px solid black;
+	position:relative;
+	top:2px;
+	left:33%;
+	border-collapse:collapse;
+	width:500px;
+	height:500px
+}
+
+td 
+{
+	border-color:  #95a5a6  ;
+	border-style:solid;
+	color:   #616a6b;
+	padding:2px;
+	text-align:center;
+	font-size:40px;
+	font-family:Arial;
+}
+
+#a {background-color:#008080;color:white;}
+#b {background-color:#935116;color:white;}
+#c {background-color:#f085ea;color:white;}
+#d {background-color:#3f7b36;color:white;}
+#e {background-color:#212f3d;color:white;}
+#f {background-color:#0000FF;color:white;}
