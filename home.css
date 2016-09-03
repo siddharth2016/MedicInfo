@@ -52,15 +52,12 @@ body {
 	background-color: #BDFCD1;
 	margin: 0px;
 	padding: 0px;
-	position: absolute;
-	left: 0px;
-	right: 0px;
 	overflow: hidden;
 }
 .medictab li {
 	float: left;
 }
-.medictab li a {					/*Vertical Navigation text coloring/formatting */ 
+.medictab li a, .dropbtn {					/*Vertical Navigation text coloring/formatting */ 
 	display: inline-block;
 	padding: 15px;
 	color: #0B7103;
@@ -68,7 +65,7 @@ body {
 	font-size: 18px;
 	transition: background-color 0.3s ease-in;
 }
-.medictab li a:hover {
+.medictab li a:hover, .dropdown:hover .dropbtn {
 	background-color: #0B7103;
 	color: white;
 }
@@ -104,4 +101,31 @@ body {
 	border-bottom: 3px solid #F98746;
 	color: #005DA2;
 	font-size: 25px;
+}
+
+
+
+li.dropdown {
+	display: inline-block;
+}
+li .dropctn {
+	display: none;
+	background-color: #0DB4FE;
+	position: absolute;
+	min-width: 150px;
+	box-shadow: 0px 8px 16px 0px #D5F2FF;
+}
+li .dropctn a {
+	color: #F2FBFF;
+	padding: 12px 14px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+li .dropctn a:hover {
+	background-color: #F2FBFF;
+	color: #0DB4FE;
+}
+li.dropdown:hover .dropctn {
+	display: block;
 }
