@@ -1,57 +1,47 @@
 <!DOCTYPE html>
 <html>
-	<head><title>LAB 3|Table</title><link rel="stylesheet" type="text/css" href="design_table_css.css"/></head>
-	<body>
-		<h1>Siddharth</h1>
-		<table>
-			<tr>
-				<td><img src="smiley.gif" alt="smiley" width="30px"/></td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>1</td>
-				<td colspan="3" rowspan="2" id="a">A</td>
-				<td colspan="4" rowspan="2" id="b">B</td>
-				<td>1</td>
-			</tr>
-			<tr>
-				<td>2</td>
-				<td>2</td>
-			</tr>
-			<tr>
-				<td>3</td>
-				<td colspan="7" id="c">C</td>
-				<td>3</td>
-			</tr>
-			<tr>
-				<td>4</td>
-				<td colspan="6" rowspan="2" id="d">D</td>
-				<td id="e">E</td>
-				<td>4</td>
-			</tr>
-			<tr>
-				<td>5</td>
-				<td id="f">F</td>
-				<td>5</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td><img src="smiley.gif" alt="smiley" width="30px"/></td>
-			</tr>
-		</table>
-	</body>
+<head>
+	<title>MedicInfo | Home</title>
+	<link rel="stylesheet" type="text/css" href="home.css"/>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="medictab">
+		
+			<span>MedicInfo</span>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<form>
+				<input type="text" name="search" placeholder="Search MedicInfo..." size="30"/>
+			</form>
+		
+		<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="quiz.html">Quizzes</a></li>
+			<li><a href="disease.html">Diseases</a></li>
+			<li><a href="medicine.html">Medicines</a></li>
+			<li><a href="symcheck.html">Symptom Checker</a></li>
+			<li id="flr"><a href="login.html">Login</a></li>
+			<li id="flr"><a href="signup.html">Sign Up</a></li>
+		</ul>
+	</div>
+
+	<div class="home">
+		<h2><ins>Welcome to MEDICINFO!</ins></h2>
+		<h4>Register with the World of Medicine and more...</h4>
+		<h3>Get Information About 50+ Medicines</h3>
+		<p>
+			In MedicInfo you will get to know about various medicines, their uses, side-effects and symptoms.
+		</p>
+		<h3>Take a QUIZ...</h3>
+		<p>
+			MedicInfo provides a unique platform for you to sharpen your general knowledge about medicines by taking a short quiz. 
+		</p>
+		<h3>Check SYMPTOMS!!</h3>
+		<p>
+			By using our symptom checker platform you will get to know what kind of disease you may face in future and provides you some useful suggestions, precautions and curing.
+		</p>
+	</div>
+</body>
 </html>
