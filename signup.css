@@ -27,7 +27,6 @@ div.border {
 	font-weight: bold;
 	color: #001528;
 	text-decoration: underline;
-	text-shadow: 2px 2px 2px 4px #92F776;
 	margin-left: 30px;
 	margin-top: 0px;
 	margin-bottom: 0em;
@@ -138,19 +137,25 @@ li.dropdown:hover .dropctn {
 }
 
 
-#heading {
-	color: #4F1300;
-	font-size: 22px;
-	font-family: "Droid Sans", sans-serif;
-}
 
+.formcss fieldset {
+	position: relative;
+	top: 70px;
+	margin-left: 20px;
+	margin-right: 520px;
+	border: 2px solid ;
+	font-family: Tahoma;
+	letter-spacing: 1px;
+	font-size: 16px;
+	background-color: #E6F5FF;
+	border-radius: 3px;
+}
 
 div#footer {
 	background-color: #003375;
 	min-width: 40%;
 	width: 100%;
 	position: relative;
-	display: block;
 	left: 0px;
 	right: 0px;
 	color: #DCFFFE;
@@ -163,4 +168,4 @@ div#footer {
 div#footer ul#credits {
 	list-style-type: circle;
 	color: #DCFFFE;
-}
+} 
