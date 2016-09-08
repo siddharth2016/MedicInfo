@@ -1,5 +1,9 @@
 body {
 	background-color: #F5FBFF;
+	background-image: url("registration4.jpg");
+	background-repeat: no-repeat;
+	background-position: 922px 393px;
+	background-origin: padding-box;
 }
 div.border {
 	background-color: #003375;
@@ -107,15 +111,15 @@ div.navigation {
 	float: right;
 }
 .navigation li a.active {
-	background-color: #C3DBFF;
-	color: #000F6D;
+	background-color: #76D7C4;
+	color: #17202A;
 }
 li.dropdown {                                        
 	display: inline-block;
 }
 li .dropctn {
 	display: none;
-	background-color: #0DB4FE;
+	background-color: #21618C;/*midnightblue; /*#E6F5FF*/
 	position: absolute;
 	min-width: 150px;
 	box-shadow: 0px 2px 2px 0px #D5F2FF;
@@ -124,32 +128,75 @@ li .dropctn {
 li .dropctn a {                                  /*    DROPDOWN MENU    */
 	color: #F2FBFF;
 	padding: 12px 14px;
+	font-family: Tahoma;
 	text-decoration: none;
 	display: block;
 	text-align: left;
 }
 li .dropctn a:hover {
 	background-color: #F2FBFF;
-	color: #0DB4FE;
+	color: #000F6D;
 }
 li.dropdown:hover .dropctn {
 	display: block;
 }
 
-
+#toppara 
+{
+	position: relative;
+	top: 60px; 
+	margin-left:80px;
+	margin-right: 100px; 
+	font-size: 22px; 
+	font-family: 'Droid Sans',sans-serif; 
+	letter-spacing: 0.5px;
+	z-index:-1;
+	border: 3px solid #5B2C6F;
+	padding: 20px;
+}
 
 .formcss fieldset {
 	position: relative;
-	top: 70px;
+	top: 90px;
 	margin-left: 20px;
-	margin-right: 35%;
+	margin-right: 36%;
 	border: 2px solid ;
 	font-family: Tahoma;
 	letter-spacing: 1px;
-	font-size: 16px;
+	font-size: 18px;
 	background-color: #E6F5FF;
 	border-radius: 3px;
 }
+.formcss fieldset input[type="text"],input[type="email"],input[type="password"],input[type="date"],input[type="number"]
+{
+	padding: 3.5px;
+	border: 2px solid #2874A6;
+	font-family: Arial;
+	border-radius: 2px;
+}
+.formcss fieldset span 
+{
+	color: #E74C3C;
+	font-size: 12px;
+	font-family: "Droid Sans",sans-serif;
+}
+.formcss fieldset input[type="submit"],input[type="reset"]
+{
+	padding: 5px;
+	font-family: Tahoma;
+	border: 2px solid #5DADE2;
+	font-size: 18px;
+	border-radius: 2px;
+	background-color: #AED6F1;
+	transition: background-color 0.1s linear;
+}
+.formcss fieldset input[type="submit"]:hover,input[type="reset"]:hover 
+{
+	cursor: pointer;
+	background-color: #D6EAF8;
+	color: #641E16;/*#4A235A;*/
+}
+
 
 div#footer {
 	background-color: #003375;
@@ -162,7 +209,6 @@ div#footer {
 	font-size: 14px;
 	font-family: "Droid Sans", sans-serif;
 	letter-spacing: 2px;
-	z-index: -1;
 	overflow: auto;
 } 
 div#footer ul#credits {
