@@ -1,0 +1,102 @@
+body {
+	background-color: #F5FBFF;
+	background-image: url("registration4.jpg");
+	background-repeat: no-repeat;
+	background-position: 922px 480px;
+
+}
+
+#toppara 
+{
+	position: relative;
+	top: 60px; 
+	margin-left:160px;
+	margin-right: 180px; 
+	font-size: 22px; 
+	font-family: 'Droid Sans',sans-serif; 
+	font-style: italic;
+	letter-spacing: 0.5px;
+	z-index:-1;
+	border: 3px solid #5B2C6F;
+	padding: 20px;
+}
+
+.formcss fieldset {
+	position: relative;
+	top: 90px;
+	margin-left: 20px;
+	margin-right: 36%;
+	border: 2px solid ;
+	font-family: Tahoma;
+	letter-spacing: 1px;
+	font-size: 18px;
+	background-color: #E6F5FF;
+	border-radius: 3px;
+}
+.formcss fieldset input[type="text"],input[type="email"],input[type="password"],input[list],input[type="number"]
+{
+	padding: 3.5px;
+	border: 2px solid #2874A6;
+	font-family: Arial;
+	border-radius: 2px;
+}
+.formcss fieldset span 
+{
+	color: #E74C3C;
+	font-size: 12px;
+	font-family: "Droid Sans",sans-serif;
+}
+.formcss fieldset input[type="submit"],input[type="reset"]
+{
+	padding: 5px;
+	font-family: Tahoma;
+	border: 2px solid #5DADE2;
+	font-size: 18px;
+	border-radius: 2px;
+	background-color: #AED6F1;
+	transition: background-color 0.1s linear;
+}
+.formcss fieldset input[type="submit"]:hover,input[type="reset"]:hover 
+{
+	cursor: pointer;
+	background-color: #D6EAF8;
+	color: #641E16;/*#4A235A;*/
+}
+.formcss textarea 
+{
+	border: 2px solid #2874A6;
+	font-family: Arial;
+	border-radius: 2px;
+}
+
+
+div#footer, div#footer a {
+	background-color: #003375;
+	min-width: 40%;
+	width: 100%;
+	position: relative;
+	left: 0px;
+	right: 0px;
+	color: #DCFFFE;
+	font-size: 14px;
+	font-family: "Droid Sans", sans-serif;
+	letter-spacing: 2px;
+	overflow: auto;
+	text-decoration: none;
+}
+div#footer ul#credits {
+	list-style-type: circle;
+	color: #DCFFFE;
+} 
+div#footer span#footright1 {
+	margin-left: 85%;
+	font-size: 19px;
+	position: absolute;
+	top: 50%;
+}
+div#footer span#footright2 {
+	margin-left: 85%;
+	font-size: 14px;
+	position: absolute;
+	top: 65%;
+}

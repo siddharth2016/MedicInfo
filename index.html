@@ -3,24 +3,25 @@
 <head>
 	<title>MedicInfo | Home</title>
 	<link rel="stylesheet" type="text/css" href="homepage.css"/>
+	<link rel="stylesheet" type="text/css" href="Header.css"/>
 	<meta charset="utf-8"/>
 	<base href="index.html"/>
 </head>
 <body>
 	<div class="border"></div>
-	
+	<div id="hints"></div>
 	<div class="medictab">
 		
 			<h3>MedicInfo <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
 			
-			<form>
-				<input type="text" name="search" placeholder="Search MedicInfo..." size="30"/>
+			<form action="SearchResults.php" method="GET" autocomplete="off">
+				<input type="text" name="search" placeholder="Search Diseases..." size="30" onkeyup="showHints(this.value)"/>
 				<input type="submit" value="Search" />
 			</form>
 	</div>
 
 	
-	<div class="navigation">
+	<div class="navigation" id="navigation">
 		<ul>
 			<li><a href="index.html" class="active">Home</a></li>
 			<li class="dropdown">
@@ -34,7 +35,7 @@
 			<li class="dropdown">
 				<a href="disease.html" class="dropbtn">Diseases</a>
 				<div class="dropctn">
-					<a href="adenoinf.html">Adenovirus Infection</a>
+					<a href="adeno.html">Adenovirus Infection</a>
 					<a href="sleepsick.html">Sleeping Sickness</a>
 					<a href="arthritis.html">Arthritis</a>
 					<a href="disease.html">More...</a>
@@ -45,9 +46,9 @@
 			<li class="dropdown">
 				<a href="medicine.html" class="dropbtn">Medicines</a>
 				<div class="dropctn">
-					<a href="">Vitamin B12</a>
-					<a href="">Metformin</a>
-					<a href="">Analgesics</a>
+					<a href="vitaminb12.html">Vitamin B12</a>
+					<a href="metform.html">Metformin</a>
+					<a href="analgesicss.html">Analgesics</a>
 					<a href="medicine.html">More...</a>				
 					</div>
 			</li>
@@ -55,15 +56,44 @@
 			
 			<li><a href="sympcheck.html">Symptom Checker</a></li>
 			<li><a href="about.html">About Us</a></li>
-			<li id="flr"><a href="login.html" onclick="login()">Login</a></li>
-			<li id="flr"><a href="signup.html" style="border-left: 1px solid powderblue;">Sign Up</a></li>
+
 		</ul>
 	</div>
 
-    
+    <br/><br/><br/>
     <div class="image">
         <!-- ANIMATION ON HOME PAGE FOR IMAGES -->
     </div>
+
+    <br/>
+
+    <!-- BMI CALCULATOR HERE -->
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  	<div class="modal-content">
+    
+    <span class="close">x</span><br><br/>
+    
+	Age:<br>
+	  <input type="text" name="age" id="age1" placeholder="Your age"  onblur="age_validate()"  onfocus="validate_age()" required><br><span id="p1"></span><br/>
+	Gender:<br>
+	  <input type="radio" name="gender" id="gen1" value="Male" >Male
+	  <input type="radio" name="gender" id="gen2" value="Female" >Female<br><span id="p2"></span><br/>
+	Height:<br>
+	  <input type="text" name="height" id="hei1" placeholder="Centimeters" onfocus="validate_height()" onblur="height_validate()" required><br><span id="p3"></span><br/>
+	Weight:<br>
+	  <input type="text" name="weight" id="wei1" placeholder="Kilogram" onfocus="validate_weight()" onblur="weight_validate()" required><br><span id="p4"></span><br/>
+	  <input type="submit" value="Calculate" onclick="return evalute()">
+	
+	<p>
+    <span id="output"></span><br>
+    <span id="comment"></span>
+  	</p>
+  	</div>
+
+	</div>
+
 
 
 	<div class="home">
@@ -80,12 +110,11 @@
                 <hr/>
                 	<h3 style="text-decoration: underline;">Get Information About Various Medicine and Disease</h3>
                 	<p style="text-align: justify;">At MedicInfo we provide you the details of various <a href="medicine.html">medicines</a> and common <a href="disease.html">diseases</a>. Also you will get to know about their uses, side-effects and causing symptoms. <br/>
-                	Our motive is wellfare of all beings. So join our family and know about your health with a single <a href="#">click</a>.</p>
+                	Our motive is wellfare of all beings. So join our family and know about your health.</p>
     			<hr/>
     				<h3 style="text-decoration: underline;">Take A Quiz</h3>
     				<p align="justify">
-    					Here you can take a short quiz of 10 questions, all are multiple choice with single correct answer. This will sharpen your general knowledge over the field of medicines and diseases.<br/>
-    					So make the use of this amazing platform and <a href="signup.html">register</a> with us.
+    					Here you can take a short quiz of 10 questions, all are multiple choice with single correct answer. This will sharpen your general knowledge over the field of medicines and diseases. Click <a href="quiz.html">Here</a>.<br/>
     				</p>
     			<hr/>
     				<h3 style="text-decoration: underline;">Tips for College and Health Safety</h3>
@@ -127,10 +156,9 @@
     			<hr/>
     				<h3 style="text-decoration: underline;">More...</h3>
     				<p align="justify">
-    					<ul style="list-style-type: circle;">
-    						<li>""</li>
-    						<li>""</li>
-    						<li>""</li>
+    					<ul>
+    						<li><a href="interesting_facts.html">Interesting Facts !</a></li>
+    						<li><p id="myBtn">Calculate BMI</p></li>
     					</ul>
     				</p>
     		</span>
@@ -138,18 +166,59 @@
 
 	</div>
 
-
+	<br/>
 	<div id="footer">
 		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
 		<p style="text-align: center;">MEDICINFO</p>
-		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy</p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy | <a href="feedback.php" style="font-size: 11px;">FeedBack</a></p>
 		<hr/>
 			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
 			<ul id="credits">
 				<li>Kunal</li>
 				<li>Kanishk</li>
 				<li>Siddharth</li>
-			</ul></p>
+			</ul>
+				<span id="footright1">Submitted To:-</span>
+				<span id="footright2">Dr. G. Malathi</span>
+			</p>
 	</div>
+
+	<script src="bmi.js"></script>
+
+
+
+	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
+
+	<script type="text/javascript">
+		
+		function showHints(str)
+		{
+			if(str.length == 0 || str == "")
+			{
+				document.getElementById("hints").innerHTML="";
+				document.getElementById("hints").style.border="none";
+				document.getElementById("navigation").style.marginTop = "14px";
+				return;
+			}
+			else
+			{
+				var xmlhttp = new XMLHttpRequest();
+
+				xmlhttp.onreadystatechange = function()
+				{
+					if(this.readyState == 4 && this.status == 200)
+					{
+						document.getElementById("hints").innerHTML = this.responseText;
+						document.getElementById("hints").style.border = "1px solid blue";
+						document.getElementById("navigation").style.marginTop = "36px";
+					}
+				};
+
+				xmlhttp.open("GET", "SearchHints.php?q="+str, true);
+				xmlhttp.send();
+			}
+		}
+
+	</script>
 </body>
 </html>

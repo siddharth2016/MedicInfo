@@ -1,0 +1,30 @@
+body{
+	background-color: #EBF5FB;
+}
+ 	
+h2 {
+    letter-spacing:3px;
+    font-family:'Droid Sans', sans-serif;
+    color:#262227;
+    font-size: 34px;
+    text-align: center;
+    font-weight: bold;
+}
+h4{
+	display:block;
+    letter-spacing:3px;
+    word-spacing:3px;
+    font-size: 22px;
+    font-family:'Droid Sans', sans-serif;
+    background-color: midnightblue;
+    color: #f2f2f2;
+    padding:5px 2px;
+    text-align: center;
+}
+span 
+{
+    font-family:'Droid Sans', sans-serif;
+    color: #000638;
+    font-size: 20px;
+    text-align: justify;
+}

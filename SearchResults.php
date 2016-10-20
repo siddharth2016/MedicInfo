@@ -1,7 +1,150 @@
-<!DOCTYPE html>
+<?php
+$txt = "";
+if($_SERVER['REQUEST_METHOD']=="GET")
+{
+	if(isset($_GET['search']))
+	{
+		$txt1 = $_GET['search'];
+		$txt = validate($_GET['search']);
+	}
+
+	$txt = strtolower($txt);
+
+	if(strcmp($txt, "anemia") == 0)
+	{
+		$id = 1;
+	}
+	else if(strcmp($txt, "diarrhea") == 0)
+	{
+		$id = 2;
+	}
+	else if(strcmp($txt, "lungcancer") == 0)
+	{
+		$id = 3;
+	}
+	else if(strcmp($txt, "coronaryarterydisease") == 0 || strcmp($txt, "cad") == 0)
+	{
+		$id = 4;
+	}
+	else if(strcmp($txt, "adenovirusinfection") == 0)
+	{
+		$id = 5;
+	}
+	else if(strcmp($txt, "arthritis") == 0)
+	{
+		$id = 6;
+	}
+	else if(strcmp($txt, "type2diabetes") == 0)
+	{
+		$id = 7;
+	}
+	else if(strcmp($txt, "sleepingsickness") == 0)
+	{
+		$id = 8;
+	}
+	else if(strcmp($txt, "stroke") == 0)
+	{
+		$id = 9;
+	}
+	else if(strcmp($txt, "chronicobstructivepulmonarydisease") == 0 || strcmp($txt, "copd")==0)
+	{
+		$id = 10;
+	}
+	else if(strcmp($txt, "fungaleyeinfection") == 0)
+	{
+		$id = 11;
+	}
+	else if(strcmp($txt, "birdflu") == 0)
+	{
+		$id = 12;
+	}
+	else if(strcmp($txt, "dengue") == 0)
+	{
+		$id = 13;
+	}
+	else if(strcmp($txt, "dvt") == 0 || strcmp($txt, "deepveinthrombosis")==0)
+	{
+		$id = 14;
+	}
+	else if(strcmp($txt, "lassafever") == 0)
+	{
+		$id = 15;
+	}
+	else if(strcmp($txt, "leadpoisoning") == 0)
+	{
+		$id = 16;
+	}
+	else if(strcmp($txt, "foodborneillness") == 0)
+	{
+		$id = 17;
+	}
+	else if(strcmp($txt, "typhoidfever") == 0)
+	{
+		$id = 18;
+	}
+	else if(strcmp($txt, "seasonalflu") == 0)
+	{
+		$id = 19;
+	}
+	else if(strcmp($txt, "tuberculosis") == 0)
+	{
+		$id = 20;
+	}
+	else
+	{
+		$res = "No Search Results Found for ".$txt1;
+		$id=-1;
+	}
+}
+
+function validate($x)
+{
+	$x = trim($x);
+	$x = str_replace(' ', '', $x);
+	$x = stripslashes($x);
+	$x = htmlspecialchars($x);
+	return $x;
+}
+
+$name=$desc=$symp=$cure="";
+
+if($id>0 and $id<=20)
+{
+$conn = mysqli_connect('localhost','root', '15bce1286','medicinfo');
+if(!$conn)
+{
+	die("Connection Error ".mysqli_error($conn));
+}
+
+$sql = "SELECT * FROM disease where Did=$id";
+
+$result = mysqli_query($conn, $sql);
+
+if(!$result)
+{
+	die("Connection error ".mysqli_error($conn));
+}
+
+while($row = mysqli_fetch_assoc($result))
+{
+	$name = $row['Dname'];
+	$desc = $row['Ddesc'];
+	$symp = $row['Dsymp'];
+	$cure = $row['Dcure'];
+}
+
+}
+
+else
+{
+	$name=$desc=$symp=$cure=$res;
+}
+?>
+
+
 <html>
 <head>
-	<title>MedicInfo | About Us</title>
+	<title>MedicInfo | <?php echo strtoupper($txt);?></title>
 	<link rel="stylesheet" type="text/css" href="aboutpage.css"/>
 	<link rel="stylesheet" type="text/css" href="Header.css"/>
 </head>
@@ -12,7 +155,7 @@
 		
 			<h3>MedicInfo <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
 			
-			<form action="SearchResults.php" method="GET" autocomplete="off">
+			<form action="SearchResults.php" method="GET">
 				<input type="text" name="search" placeholder="Search MedicInfo..." size="30" onkeyup="showHints(this.value)"/>
 				<input type="submit" value="Search" />
 			</form>
@@ -52,33 +195,38 @@
 			</li>
 			
 			<li><a href="sympcheck.html">Symptom Checker</a></li>
-			<li><a href="about.html" class="active">About Us</a></li>
+			<li><a href="about.html">About Us</a></li>
 
 		</ul>
 	</div>
 <br/><br/><br/>
 	<div style="position: relative; top: 55px; z-index: -1; min-width: 30%; width: 100%;">
-	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;">About</span> <span style="letter-spacing: 2px; font-family: 'Droid Sans', Sans-Serif; font-size: 25px; text-decoration: underline;">MedicInfo</span></p>
+	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;">About</span> <span style="letter-spacing: 2px; font-family: 'Droid Sans', Sans-Serif; font-size: 25px; text-decoration: underline;"><?php echo strtoupper($name);?></span></p>
 	</div>
 	<div style="position: relative; top: 30px; overflow: auto; z-index:-1;">
 		<p align="justify" style="font-family: Tahoma, Geneva, sans-serif; font-size: 18px; border: 3px solid midnightblue; padding-top: 8px; padding-left: 10px; padding-right: 10px; border-radius: 4px; background-color: #E6F5FF; letter-spacing: 0.5px;">
-			MedicInfo is the abbreviation used here for Medical Information. This site deals with various kind of medicines, their uses and side-effects. This can be called as the base for finding any information regarding medicines as well as the diseases for which these are used.<br/> <br/>
-			Medicine has opened a reliable methods of curing and protecting human lives. It showed the various ways of diagnosing the diseases of human beings. X-ray technology in the midst of twentieth century provided new technique of diagnosis. For last hundred years' medicinal processes and medical equipment are proved to be the boon to human health for diagnosing properly and for applying proper medicines to the patient. <br/>
-			But what happen if a doctor or somebody advised you a wrong medicine and you are getting side-effect which are far more adverse than your disease, for helping people from this we provide a well focused platform for checking your symptoms.
-			<br/><br/>
+			
 			<span id="heading">
-				Symptom Checker
-			</span>
-			<br/>
-			Symptom Checker gives you access to a sophisticated medical diagnosis tool. Using the latest searching technologies, the system can take a pattern of symptoms and instantly compute from our database of diseases, the most likely ones.<br/>
-			It is based on the same system that is relied on by doctors and nurses around the world to help with diagnosis and is acknowledged as the clear leader in its field.<br/>
+				Description
+			</span><br/>
+			<?php echo $desc;?>
 			
 			<br/><br/>
 			<span id="heading">
-				Quizzes
+				Symptoms
 			</span>
 			<br/>
-			Here you are not only bound to view information or check your symptoms, we provide you another interesting yet amazing platform to check your knowledge about medicines ad diseases. We give you a quiz of your choice (either medicine or disease) to which you to answer appropriately and at the end of the quiz you will get know your score, correct and incorrect answers attempted by you.
+				
+				<?php echo $symp; ?>
+
+			<br/><br/>
+			<span id="heading">
+				Cure
+			</span>
+			<br/>
+				
+				<?php echo $cure; ?>
+
 			<br/><br/>
 		</p>
 	</div>

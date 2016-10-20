@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>MedicInfo | Diseases</title>
-	<link rel="stylesheet" type="text/css" href="medicinepage.css"/>
+	<title>MedicInfo | Quiz</title>
+	<link rel="stylesheet" type="text/css" href="aboutpage.css"/>
 	<link rel="stylesheet" type="text/css" href="Header.css"/>
+
+	<style type="text/css">
+		
+		span a {
+			text-decoration: none;
+			color: #B03A2E;
+		}
+
+	</style>
 </head>
 <body>
-		<div class="border"></div>
+	<div class="border"></div>
 	<div id="hints"></div>
 	<div class="medictab">
 		
@@ -24,7 +33,7 @@
 			<li><a href="index.html">Home</a></li>
 			
 			<li class="dropdown">
-				<a href="quiz.html" class="dropbtn">Quizzes</a>
+				<a href="quiz.html" class="dropbtn active">Quizzes</a>
 				<div class="dropctn">
 					<a href="diseasequiz.html">Quiz on Diseases</a>
 					<a href="medicinequiz.html">Quiz on Medicines</a>
@@ -42,7 +51,7 @@
 			</li>
 			
 			<li class="dropdown">
-				<a href="medicine.html" class="dropbtn active">Medicines</a>
+				<a href="medicine.html" class="dropbtn">Medicines</a>
 				<div class="dropctn">
 					<a href="vitaminb12.html">Vitamin B12</a>
 					<a href="metform.html">Metformin</a>
@@ -56,37 +65,38 @@
 
 		</ul>
 	</div>
-<br/><br><br/>
-		<div style="position: relative; max-width: 100%; top: 70px; z-index:-1; border: 1px solid #00243D; background-color: #CEE4FF;">
-			<p style="font-size: 30px; font-family: 'Droid Sans',sans-serif; text-decoration: underline; text-align: center; color: #070C34;">Medicines</p>
-		</div>
+<br/><br/><br/>
+	
+	<div style="position: relative; top: 55px; z-index: -1; min-width: 30%; width: 100%;">
+	<p style="word-spacing: 4px;"><span style="font-family: Tahoma, Geneva, sans-serif; font-size: 22px;">About</span> <span style="letter-spacing: 2px; font-family: 'Droid Sans', Sans-Serif; font-size: 25px; text-decoration: underline;">Quiz</span></p>
+	</div>
+	<div style="position: relative; top: 30px; overflow: auto; z-index:-1;">
+		<p align="justify" style="font-family: Tahoma, Geneva, sans-serif; font-size: 18px; border: 3px solid midnightblue; padding-top: 8px; padding-left: 10px; padding-right: 10px; border-radius: 4px; background-color: #E6F5FF; letter-spacing: 0.5px;">
+			
+		Quiz is necessary for every individual to recognize his/her knowledge about the subject.
+		Talking to the same concept, here we have included a basic set of 10 questions for Diseases and Medicines which will definitly improve your knowledge over this area.
 
-
-	<div>
-	<ul class="vertNav">		
-			<li><a href="Vitamin_B12.html" target="medicineframe" class="1" id="linkactive">Vitamin B12(Cyanocobalamin)</a></li>
-			<li><a href="Loperamide.html" target="medicineframe" class="1">Loperamide</a></li>
-			<li><a href="Cyramza.html" target="medicineframe" class="1">Cyramza(Ramucirumab)</a></li>
-			<li><a href="Metformin.html" target="medicineframe" class="1">Metformin(Glucophage)</a></li>
-			<li><a href="Carvedilol.html" target="medicineframe" class="1">Carvedilol(Coreg)</a></li>
-			<li><a href="Analgesics.html" target="medicineframe" class="1">Analgesics</a></li>
-			<li><a href="NSAIDS.html" target="medicineframe" class="1"><abbr title="Non-Steroidal Anti-Inflammatory Drugs">(NSAIDs)</abbr></a></li>
-			<li><a href="FolexPFS.html" target="medicineframe" class="1">Folex PFS(Methotrexate)</a></li>
-			<li><a href="Etopophos.html" target="medicineframe" class="1">Etopophos(Etoposide Phosphate)</a></li>
-			<li><a href="Carboplatin.html" target="medicineframe" style="border-bottom: none;" class="1">Carboplatin</a></li>
-	</ul>
-	<iframe src="Vitamin_B12.html" name="medicineframe" id="framecss">
-		<!-- Frame box -->
-	</iframe>
+			<br/><br/>
+			<span>
+				<a href="diseasequiz.html">Take Quiz on Diseases !</a>
+				<br/>
+				<a href="medicinequiz.html">Take Quiz on Medicines !</a>
+			</span>
+			<br/><br/>
+		</p>
 	</div>
 
-	<br/><br/><br/><br/><br/><br/>
-	<br/><br/><br/><br/>
+
+
+
+
+
+	<br/><br/>
 
 	<div id="footer">
 		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
 		<p style="text-align: center;">MEDICINFO</p>
-		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy | <a href="feedback.php" style="font-size: 11px;">FeedBack</a></p>
+		<p style="font-size: 11px; text-align: center;"><abbr title="siddharth.chandra2015@vit.ac.in">Contact Us</abbr> | Visit Again | Stay Healthy |<a href="feedback.php" style="font-size: 11px;">FeedBack</a></p>
 		<hr/>
 			<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
 			<ul id="credits">
@@ -99,7 +109,9 @@
 			</p>
 	</div>
 
-	<script type="text/javascript" src="diseasemedicine.js"></script>
+
+
+
 	<!-- JAVASCRIPT FOR SEARCH SUGGESTIONS -->
 
 	<script type="text/javascript">
@@ -133,6 +145,5 @@
 		}
 
 	</script>
-
 </body>
 </html>

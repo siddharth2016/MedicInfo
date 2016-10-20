@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Imagemapping_demo</title>
+    <link rel="stylesheet" type="text/css" href="Header.css"/>
+	<!--<link rel="stylesheet" type="text/css" href="image.css"/>-->
+	<meta charset="utf-8"/>
+  <style type="text/css">
+    
+    .map {
+      float: right;
+    }
+
+  </style>
+</head>
+<body>
+<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<h3>MedicInfo <p style="text-decoration:none;">Saving Lives | Protecting People | Sharing Knowledge</p></h3>
+			
+			<form action="SearchResults.php" method="GET">
+				<input type="text" name="search" placeholder="Search MedicInfo..." size="30" onkeyup="showHints(this.value)"/>
+				<input type="submit" value="Search" />
+			</form>
+	</div>
+
+	
+	<div class="navigation" id="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			
+			<li class="dropdown">
+				<a href="quiz.html" class="dropbtn">Quizzes</a>
+				<div class="dropctn">
+					<a href="diseasequiz.html">Quiz on Diseases</a>
+					<a href="medicinequiz.html">Quiz on Medicines</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn">Diseases</a>
+				<div class="dropctn">
+					<a href="adeno.html">Adenovirus Infection</a>
+					<a href="sleepsick.html">Sleeping Sickness</a>
+					<a href="arthritis.html">Arthritis</a>
+					<a href="disease.html">More...</a>
+				</div>
+			</li>
+			
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">Medicines</a>
+				<div class="dropctn">
+					<a href="vitaminb12.html">Vitamin B12</a>
+					<a href="metform.html">Metformin</a>
+					<a href="analgesicss.html">Analgesics</a>
+					<a href="medicine.html">More...</a>
+				</div>
+			</li>
+			
+			<li><a href="sympcheck.html" class="active">Symptom Checker</a></li>
+			<li><a href="about.html">About Us</a></li>
+
+		</ul>
+	</div><br><br><br>
+
+
+<img src="crop_human.jpg" alt="" usemap="#Map" class="map" />
+<map name="Map" id="Map">
+
+    <div id="1"><area alt="hand" title="" href="#" shape="poly" coords="153,141,174,131,182,275,161,270"  /></div><p id="text1"></p>
+
+    <div id="2"><area alt="hand" title="" href="#" shape="poly" coords="46,135,74,147,63,274,41,269" /></div><p id="text2"></p>
+
+    <div id="3"><area alt="shoulder" title="" href="#" shape="poly" coords="46,117,67,132,90,98,83,89" /></div><p id="text3"> </p>
+
+    <div id="4"><area alt="shoulder" title="" href="#" shape="poly" coords="159,128,174,115,139,92,131,107" /></div><p id="text4"></p>
+
+    <div id="5"><area alt="chest" title="" href="#" shape="poly" coords="78,122,145,124,146,151,80,153" /></div><p id="text5"></p>
+
+    <div id="6"><area alt="stomach" title="" href="#" shape="poly" coords="79,168,146,174,148,211,76,213" /></div><p id="text6"></p>
+
+    <div id="7"><area alt="thigh" title="" href="#" shape="poly" coords="110,252,108,296,76,290,74,248" /></div><p id="text7"></p>
+
+    <div id="8"><area alt="thigh" title="" href="#" shape="poly" coords="116,253,152,246,148,290,117,292" /></div><p id="text8"></p>
+
+    <div id="9"><area alt="knee" title="" href="#" shape="poly" coords="86,315,110,320,110,347,86,348" /></div><p id="text9"></p>
+
+    <div id="10"><area alt="knee" title="" href="#" shape="poly" coords="115,317,138,310,140,350,119,350" /></div><p id="text10"></p>
+
+    <div id="11"><area alt="lower-leg" title="" href="#" shape="poly" coords="84,360,107,361,111,449,82,449" /></div><p id="text11"></p>
+
+    <div id="12"><area alt="lower-leg" title="" href="#" shape="poly" coords="119,363,145,364,144,448,118,449" /></div><p id="text12"></p>
+
+    <div id="13"><area alt="neck" title="" href="#" shape="poly" coords="96,81,127,81,124,89,98,91" /></div><p id="text13"></p>
+
+    <div id="14"><area alt="head" title="" href="#" shape="poly" coords="91,31,136,31,129,74,94,72" /></div><p id="text14"></p>
+    
+</map>
+
+<script>
+var item1 = document.getElementById("1");
+item1.addEventListener("mouseover", fun1, false);
+item1.addEventListener("mouseout", func1, false);
+
+function fun1()
+{   
+   document.getElementById("text1").setAttribute("style", "display:block;");
+   document.getElementById("text1").innerHTML="Hand";
+}
+
+function func1()
+{  
+    document.getElementById("text1").setAttribute("style", "display:none;");
+}
+
+var item2 = document.getElementById("2");
+item2.addEventListener("mouseover", fun2, false);
+item2.addEventListener("mouseout", func2, false);
+
+function fun2()
+{   
+   document.getElementById("text2").setAttribute("style", "display:block;");
+   document.getElementById("text2").innerHTML="Hand";
+}
+
+function func2()
+{  
+    document.getElementById("text2").setAttribute("style", "display:none;");
+}
+
+var item3 = document.getElementById("3");
+item3.addEventListener("mouseover", fun3, false);
+item3.addEventListener("mouseout", func3, false);
+
+function fun3()
+{   
+   document.getElementById("text3").setAttribute("style", "display:block;");
+   document.getElementById("text3").innerHTML="Shoulder";
+}
+
+function func3()
+{  
+    document.getElementById("text3").setAttribute("style", "display:none;")
+}
+
+var item4 = document.getElementById("4");
+item4.addEventListener("mouseover", fun4, false);
+item4.addEventListener("mouseout", func4, false);
+
+function fun4()
+{   
+   document.getElementById("text4").setAttribute("style", "display:block;");
+   document.getElementById("text4").innerHTML="Shoulder";
+}
+
+function func4()
+{  
+    document.getElementById("text4").setAttribute("style", "display:none;")
+}
+
+var item5 = document.getElementById("5");
+item5.addEventListener("mouseover", fun5, false);
+item5.addEventListener("mouseout", func5, false);
+
+function fun5()
+{   
+   document.getElementById("text5").setAttribute("style", "display:block;");
+   document.getElementById("text5").innerHTML="Chest";
+}
+
+function func5()
+{  
+    document.getElementById("text5").setAttribute("style", "display:none;");
+}
+
+var item6 = document.getElementById("6");
+item6.addEventListener("mouseover", fun6, false);
+item6.addEventListener("mouseout", func6, false);
+
+function fun6()
+{   
+   document.getElementById("text6").setAttribute("style", "display:block;");
+   document.getElementById("text6").innerHTML="Stomach";
+}
+
+function func6()
+{  
+    document.getElementById("text6").setAttribute("style", "display:none;")
+}
+
+var item7 = document.getElementById("7");
+item7.addEventListener("mouseover", fun7, false);
+item7.addEventListener("mouseout", func7, false);
+
+function fun7()
+{   
+   document.getElementById("text7").setAttribute("style", "display:block;");
+   document.getElementById("text7").innerHTML="Thigh";
+}
+
+function func7()
+{  
+    document.getElementById("text7").setAttribute("style", "display:none;");
+}
+
+var item8 = document.getElementById("8");
+item8.addEventListener("mouseover", fun8, false);
+item8.addEventListener("mouseout", func8, false);
+
+function fun8()
+{   
+   document.getElementById("text8").setAttribute("style", "display:block;");
+   document.getElementById("text8").innerHTML="Thigh";
+}
+
+function func8()
+{  
+    document.getElementById("text8").setAttribute("style", "display:none;")
+}
+
+var item9 = document.getElementById("9");
+item9.addEventListener("mouseover", fun9, false);
+item9.addEventListener("mouseout", func9, false);
+
+function fun9()
+{   
+   document.getElementById("text9").setAttribute("style", "display:block;");
+   document.getElementById("text9").innerHTML="Knee";
+}
+
+function func9()
+{  
+    document.getElementById("text9").setAttribute("style", "display:none;")
+}
+
+var item10 = document.getElementById("10");
+item10.addEventListener("mouseover", fun10, false);
+item10.addEventListener("mouseout", func10, false);
+
+function fun10()
+{   
+   document.getElementById("text10").setAttribute("style", "display:block;")
+   document.getElementById("text10").innerHTML="Knee";
+}
+
+function func10()
+{  
+    document.getElementById("text10").setAttribute("style", "display:none;")
+}
+
+var item11 = document.getElementById("11");
+item11.addEventListener("mouseover", fun11, false);
+item11.addEventListener("mouseout", func11, false);
+
+function fun11()
+{   
+   document.getElementById("text11").setAttribute("style", "display:block;");
+   document.getElementById("text11").innerHTML="Lower-leg";
+}
+
+function func11()
+{  
+    document.getElementById("text11").setAttribute("style", "display:none;")
+}
+
+var item12 = document.getElementById("12");
+item12.addEventListener("mouseover", fun12, false);
+item12.addEventListener("mouseout", func12, false);
+
+function fun12()
+{   
+   document.getElementById("text12").setAttribute("style", "display:block;");
+   document.getElementById("text12").innerHTML="Lower-leg";
+}
+
+function func12()
+{  
+    document.getElementById("text12").setAttribute("style", "display:none;")
+}
+
+var item13 = document.getElementById("13");
+item13.addEventListener("mouseover", fun13, false);
+item13.addEventListener("mouseout", func13, false);
+
+function fun13()
+{   
+   document.getElementById("text13").setAttribute("style", "display:block;");
+   document.getElementById("text13").innerHTML="Neck";
+}
+
+function func13()
+{  
+    document.getElementById("text13").setAttribute("style", "display:none;")
+}
+
+var item14 = document.getElementById("14");
+item14.addEventListener("mouseover", fun14, false);
+item14.addEventListener("mouseout", func14, false);
+
+function fun14()
+{   
+   document.getElementById("text14").setAttribute("style", "display:block;");
+   document.getElementById("text14").innerHTML="Head";
+}
+
+function func14()
+{  
+    document.getElementById("text14").setAttribute("style", "display:none;")
+}
+</script>
+</body>
+</html>

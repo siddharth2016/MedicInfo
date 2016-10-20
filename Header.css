@@ -1,0 +1,149 @@
+body {
+	background-color: #F5FBFF;
+}
+div.border {
+	background-color: #003375;
+	padding: 10px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+#hints
+{
+	position: absolute;
+	top: 13%;
+	right: 6.1%;
+	width: 244.5px;
+	padding-left: 8px;
+	background-color: #D6EAF8;
+	color: #1B4F72;
+	font-weight: bold;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.medictab {                    /*MedicInfo Header Class*/
+	max-width: 100%;
+	position: relative;
+	top: 24px;
+	left: 0px;
+	right: 0px;
+	padding-bottom: 15px;
+	padding-top: 10px;
+}
+.medictab h3 {                 /* Formatting MedicInfo word under Header*/
+	font-size: 35px;
+	font-family: 'Droid Sans', sans-serif;
+	letter-spacing: 4px;
+	font-weight: bold;
+	color: #001528;
+	text-decoration: underline;
+	margin-left: 30px;
+	margin-top: 0px;
+	margin-bottom: 0em;
+}
+.medictab h3 p {
+	font-size: 16px;
+	margin-top: 7px;
+	margin-left: 0.5px;
+	letter-spacing: 2px;
+	text-decoration: none;
+}
+.medictab input[type="text"] {					/*Style for Search tab*/
+	border-color: midnightblue;
+	border-radius: 0.9px;
+	padding: 6px;
+	border-style: solid;
+	position: absolute;
+	top: 20px;
+	right: 74px;
+	opacity: 0.8;
+	transition: border-color 0.2s linear;
+}
+.medictab input[type="text"]:focus {			/* Transition of search tab*/
+	border-color: #00529B;
+	opacity: 1;
+}
+.medictab input[type="submit"] {
+	border-radius: 3px;
+	color: powderblue;
+	position: absolute;
+	top: 21px;
+	right: 8px;
+	font-size: 15px;
+	font-family: "Droid Sans", sans-serif;
+	padding: 5px;
+	background-color: midnightblue;
+	border: 1px solid #2079C9;
+}
+.medictab input[type="submit"]:hover {
+	background-color: powderblue;
+	color: midnightblue;
+	cursor: pointer;
+}
+
+
+div.navigation {
+	position: absolute;
+	margin-top: 14px;
+	left: 0px;
+	right: 0px;
+}
+.navigation ul {                               /* Navigation bar list type*/
+	list-style-type: none;
+	background-color: #003375;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.navigation li {
+	float: left;
+}
+.navigation li a, .dropbtn {
+	font-family: 'Droid Sans', sans-serif;					/*Vertical Navigation text coloring/formatting */ 
+	display: inline-block;
+	padding: 12px;
+	color: #E1F1FF;
+	text-decoration: none;
+	font-size: 14px;
+	letter-spacing: 1px;
+	border-right: 1px solid powderblue;
+	transition: background-color 0.2s ease-in;
+}
+.navigation li a:hover, .dropdown:hover .dropbtn {
+	background-color: #C3DBFF;
+	color: #000F6D;
+}
+#flr {                             /* Floating some elements with id flr to float right*/
+	float: right;
+}
+.navigation li a.active {
+	background-color: #76D7C4;
+	color: #17202A;
+}
+li.dropdown {                                        
+	display: inline-block;
+}
+li .dropctn {
+	display: none;
+	background-color: #21618C;
+	position: absolute;
+	min-width: 150px;
+	box-shadow: 0px 2px 2px 0px #D5F2FF;
+	border-radius: 1px;
+}
+li .dropctn a {                                  /*    DROPDOWN MENU    */
+	color: #F2FBFF;
+	padding: 12px 14px;
+	text-decoration: none;
+	font-family: Tahoma;
+	display: block;
+	text-align: left;
+}
+li .dropctn a:hover {
+	background-color: #F2FBFF;
+	color: #000F6D;
+}
+li.dropdown:hover .dropctn {
+	display: block;
+}
