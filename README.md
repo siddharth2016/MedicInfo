@@ -191,7 +191,7 @@ imagemapping concept for recognizing and analysing symptoms of user.
 
 ### Reference
 
-* [W3School](www.w3schools.com)
+* [W3School](https://www.w3schools.com/)
 * [Chennai Sunday - JS](http://www.chennaisunday.com/jsradio.html)
 * [Itechies](http://www.itechies.net/tutorials/jscript/jsexample.php-pid-jform.htm)
 * [PHP Easy Step](http://www.phpeasystep.com/phptu/6.html)
