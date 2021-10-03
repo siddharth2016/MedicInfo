@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif/png" href="assets/img/Capture.JPG">
+    <title>Calories/BMI Calc</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
+    <link href="cal/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header"><a class="navbar-brand navbar-link" id="logo" href="index.html"><b>Homefit - Healthcare</b></a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right">
+                   
+                    <li role="presentation"><a href="Yoga.html">Yoga </a></li>
+                    <li role="presentation"><a href="med.html">Meditation </a></li>
+                    <li role="presentation"><a href="diet.html">Diet </a></li>
+                    <li role="presentation"><a href="Exercise.html">Injuries and Remedies </a></li>
+                    <li role="presentation"><a href="cal.html">Calories/BMI Calculator</a></li>
+                    <li role="presentation"><a href="tips.html">Covid Info</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="color: black;background: white;display: flex;justify-content: center;align-content: center;margin-top: 51px;">
+
+      <div class="container" style="margin-left: 80px;margin-right: 50px;">
+        <div class="content">
+          <h1 class="cover-heading">Calculate your Calories</h1>
+          <hr>
+          <div class="container-fluid">
+            <form class="calculate-bmi" id="form">
+              <div class="mb-3">
+                <label for="gender">Your gender</label>
+                <select id="gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+              <div>
+                <label for="age">Your Age:</label>
+                <input type="number" class="form-control" id="age" placeholder="in Years" required>
+              </div>
+              <div>
+                <label for="weight">Your weight:</label>
+                <input type="number" class="form-control" id="weight" placeholder="in Kg" style="margin-left:0px;" required>
+              </div>
+              <div>
+                <label for="height">Your height:</label>
+                <input type="number" class="form-control" id="height" placeholder="in Cm" style="margin-left:0px;" required>
+              </div>
+              <div>
+                <label for="activity_level">Your activity level</label>
+                <select id="activity_level" required>
+                  <option value="1.2">Sedentary</option>
+                  <option value="1.375">Lightly active</option>
+                  <option value="1.55">Moderately active</option>
+                  <option value="1.725">Vigorously active</option>
+                  <option value="1.9">Extremely active</option>
+                </select>
+              </div>
+              <div class="form-group-btn">
+                <button class="btn btn-info" type="submit">Calculate</button>
+                <button class="btn btn-info" type="reset">Clear</button>
+              </div>
+            </form>
+            <div class="result-container" id="result"></div>
+          </div>
+          
+        </div>
+      </div>
+  
+      <div class="container" style="margin-left: 50px;margin-right: 80px;">
+        <div role="main" class="content">
+          <h1 class="cover-heading">Calculate your BMI</h1>
+          <hr>
+          <div class="container-fluid">
+            <form class="calculate-bmi" id="bmi-form" onsubmit="calculateBMI(event)">
+              <div class="mb-3">
+                <label for="weight">Weight:</label>
+                <input type="number" class="form-control" id="weight1" placeholder="in Kg" required>
+              </div>
+              <div class="mb-3">
+                <label for="height">Height:</label>
+                <input type="number" class="form-control" id="height1" placeholder="in Cm" required>
+              </div>
+              <input type="submit" class="btn btn-info" value="Calculate">
+            </form>
+          </div>
+          <hr>
+          <div id="results" style="margin-left: 20px;"></div>
+          
+        </div>
+      </div> 
+
+
+
+      <script src="cal/script.js" type="text/javascript"></script>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
