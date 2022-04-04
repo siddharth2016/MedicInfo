@@ -6,7 +6,7 @@ Aim of project is to develop a medical website which could operate for the
 analysis of symptoms seen in patient (user); moreover it is also helpful to get
 information about diseases and their respective medicines, with help of which
 user can get knowledge of medicines about when and at what situation it can be
-used
+used.
 
 For the development of this project languages used are:
 
